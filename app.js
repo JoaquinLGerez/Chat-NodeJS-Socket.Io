@@ -7,6 +7,9 @@ const server = http.createServer(app)
 const {Server} = require('socket.io')
 const io = new Server(server)
 
+app.use(express.static(__dirname + '/cliente'));
+
+
 io.on('connection', (socket) => {
    /*  console.log('Un usuario se conecto')
 
